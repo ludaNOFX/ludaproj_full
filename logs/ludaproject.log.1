@@ -1,0 +1,101 @@
+2023-07-14 22:54:43,724 ERROR: Exception on /edit_profile [POST] [in /home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py:1414]
+Traceback (most recent call last):
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 3396, in delete
+    state = attributes.instance_state(instance)
+AttributeError: 'list' object has no attribute '_sa_instance_state'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/routes.py", line 140, in edit_profile
+    db.session.delete(last_format)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/sqlalchemy/orm/scoping.py", line 627, in delete
+    return self._proxied.delete(instance)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 3398, in delete
+    raise exc.UnmappedInstanceError(instance) from err
+sqlalchemy.orm.exc.UnmappedInstanceError: Class 'builtins.list' is not mapped
+2023-07-14 23:00:10,358 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 23:01:18,633 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 23:05:39,051 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 23:05:42,500 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 23:05:45,609 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 23:05:49,690 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-15 01:40:54,930 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-15 01:41:25,205 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-15 19:49:19,077 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:46]
+2023-07-15 19:49:49,177 ERROR: Exception on /reset_password_request [POST] [in /home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py:1414]
+Traceback (most recent call last):
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/routes.py", line 134, in reset_password_request
+    send_password_reset_email(user)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/email_utilts.py", line 13, in send_password_reset_email
+    token = user.get_reset_password_token()
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/models.py", line 63, in get_reset_password_token
+    app.config['SECRET_KEY'], algorithm='HS256').decode('utf-8')
+AttributeError: 'str' object has no attribute 'decode'
+2023-07-15 19:51:18,081 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:46]
+2023-07-15 19:51:25,808 ERROR: Exception on /reset_password_request [POST] [in /home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py:1414]
+Traceback (most recent call last):
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/routes.py", line 134, in reset_password_request
+    send_password_reset_email(user)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/email_utilts.py", line 14, in send_password_reset_email
+    send_email('[Microblog] Reset Your Password',
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/email_utilts.py", line 9, in send_email
+    mail.send(msg)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask_mail.py", line 492, in send
+    message.send(connection)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask_mail.py", line 427, in send
+    connection.send(self)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask_mail.py", line 177, in send
+    assert message.sender, (
+AssertionError: The message does not specify a sender and a default sender has not been configured
+2023-07-15 19:55:10,736 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:46]
+2023-07-15 19:55:15,918 ERROR: Exception on /reset_password_request [POST] [in /home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py:1414]
+Traceback (most recent call last):
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/routes.py", line 134, in reset_password_request
+    send_password_reset_email(user)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/email_utilts.py", line 15, in send_password_reset_email
+    send_email('[Microblog] Reset Your Password',
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/email_utilts.py", line 10, in send_email
+    mail.send(msg)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask_mail.py", line 492, in send
+    message.send(connection)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask_mail.py", line 427, in send
+    connection.send(self)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask_mail.py", line 177, in send
+    assert message.sender, (
+AssertionError: The message does not specify a sender and a default sender has not been configured
+2023-07-15 19:55:54,313 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:46]

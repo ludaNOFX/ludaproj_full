@@ -1,0 +1,111 @@
+2023-07-14 16:05:47,508 ERROR: Exception on /user/Varg [GET] [in /home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py:1414]
+Traceback (most recent call last):
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/routes.py", line 60, in user
+    return render_template('user.html', user=user, form=form, products=products.items,
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/templating.py", line 132, in _render
+    rv = template.render(context)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/templates/user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/templates/base.html", line 32, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/templates/user.html", line 7, in block 'content'
+    <td><img src="{{ url_for('static', filename='profile_pics/' + avatar[1]) }}" alt="Avatar of user {{ user.username }}"></td>
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/jinja2/environment.py", line 466, in getitem
+    return obj[argument]
+jinja2.exceptions.UndefinedError: 'avatar' is undefined
+2023-07-14 16:06:29,086 ERROR: Exception on /user/Varg [GET] [in /home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py:1414]
+Traceback (most recent call last):
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/routes.py", line 60, in user
+    return render_template('user.html', user=user, form=form, products=products.items,
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/templating.py", line 132, in _render
+    rv = template.render(context)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/templates/user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/templates/base.html", line 32, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/templates/user.html", line 7, in block 'content'
+    <td><img src="{{ url_for('static', filename='profile_pics/' + avatar[1]) }}" alt="Avatar of user {{ user.username }}"></td>
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/jinja2/environment.py", line 466, in getitem
+    return obj[argument]
+jinja2.exceptions.UndefinedError: 'avatar' is undefined
+2023-07-14 16:08:28,641 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 16:15:49,091 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 16:16:11,319 ERROR: Exception on /user/egor [GET] [in /home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py:1414]
+Traceback (most recent call last):
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/routes.py", line 60, in user
+    return render_template('user.html', user=user, form=form, products=products.items,
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/templating.py", line 132, in _render
+    rv = template.render(context)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/templates/user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/templates/base.html", line 32, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/templates/user.html", line 8, in block 'content'
+    <td><img src="{{ url_for('static', filename='profile_pics/' + avatar_files[1]) }}" alt="Avatar of user {{ user.username }}"></td>
+jinja2.exceptions.UndefinedError: list object has no element 1
+2023-07-14 16:22:04,318 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 16:25:59,118 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 16:26:03,733 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 16:26:06,468 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 16:34:59,592 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 16:35:13,365 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 16:35:22,889 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 16:35:53,528 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 16:37:24,333 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 16:38:41,375 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 16:42:22,017 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 16:46:29,663 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 20:14:22,607 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 20:14:49,843 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 20:15:22,936 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 20:15:30,323 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 20:15:38,087 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 20:19:09,582 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]

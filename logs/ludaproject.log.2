@@ -1,0 +1,107 @@
+2023-07-14 22:35:24,349 ERROR: Exception on /edit_profile [POST] [in /home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py:1414]
+Traceback (most recent call last):
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/routes.py", line 132, in edit_profile
+    current_user.pictures.remove[-1]
+TypeError: 'method' object is not subscriptable
+2023-07-14 22:36:21,640 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 22:36:26,755 ERROR: Exception on /user/Varg [GET] [in /home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py:1414]
+Traceback (most recent call last):
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/routes.py", line 60, in user
+    return render_template('user.html', user=user, form=form, products=products.items,
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/templating.py", line 132, in _render
+    rv = template.render(context)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/templates/user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/templates/base.html", line 32, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/templates/user.html", line 6, in block 'content'
+    {% set user_picture = user.pictures.last() %}
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/jinja2/utils.py", line 83, in from_obj
+    if hasattr(obj, "jinja_pass_arg"):
+jinja2.exceptions.UndefinedError: 'sqlalchemy.orm.dynamic.AppenderQuery object' has no attribute 'last'
+2023-07-14 22:52:01,705 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 22:52:05,451 ERROR: Exception on /user/Varg [GET] [in /home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py:1414]
+Traceback (most recent call last):
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/routes.py", line 61, in user
+    return render_template('user.html', user=user, form=form, products=products.items,
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/templating.py", line 132, in _render
+    rv = template.render(context)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/templates/user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/templates/base.html", line 32, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/templates/user.html", line 6, in block 'content'
+    {% set user_picture = user.pictures.last() %}
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/jinja2/utils.py", line 83, in from_obj
+    if hasattr(obj, "jinja_pass_arg"):
+jinja2.exceptions.UndefinedError: 'sqlalchemy.orm.dynamic.AppenderQuery object' has no attribute 'last'
+2023-07-14 22:52:24,803 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 22:52:33,468 ERROR: Exception on /edit_profile [POST] [in /home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py:1414]
+Traceback (most recent call last):
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 3396, in delete
+    state = attributes.instance_state(instance)
+AttributeError: 'list' object has no attribute '_sa_instance_state'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/routes.py", line 136, in edit_profile
+    db.session.delete(last_format)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/sqlalchemy/orm/scoping.py", line 627, in delete
+    return self._proxied.delete(instance)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 3398, in delete
+    raise exc.UnmappedInstanceError(instance) from err
+sqlalchemy.orm.exc.UnmappedInstanceError: Class 'builtins.list' is not mapped
+2023-07-14 22:54:35,858 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]

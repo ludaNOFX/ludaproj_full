@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
+    <style>
+        .pagination .page-link {
+            background-color: #6b6b6b;   /* Используем серый цвет для фона кнопок */
+            border-color: #6b6b6b;  /* Серая рамка */
+            color: white;  /* белый цвет текста */
+        }
+
+        .pagination .page-link:hover {
+            background-color: #4d4d4d;   /* более темный серый для фона при наведении */
+            border-color: #4d4d4d;   /* более темная серая рамка */
+            color: white;  /* белый цвет текста */
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div class="container my-4">
+        <div class="row">
+            {% for product in products %}
+                <div class="col-md-4">
+                    {% include '_product.html' %}
+                </div>
+            {% endfor %}
+        </div>
+        <nav aria-label="Page navigation">
+            <ul class="pagination">
+                {% if prev_url %}
+                    <li class="page-item">
+                        <a class="page-link" href="{{ prev_url }}">&larr; Newer</a>
+                    </li>
+                {% else %}
+                <li class="page-item disabled">
+                    <a class="page-link">&larr; Newer</a>
+                </li>
+                {% endif %}
+                {% if next_url %}
+                    <li class="page-item">
+                        <a class="page-link" href="{{ next_url }}">Older &rarr;</a>
+                    </li>
+                {% else %}
+                    <li class="page-item disabled">
+                        <a class="page-link">Older &rarr;</a>
+                </li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
+{% endblock %}

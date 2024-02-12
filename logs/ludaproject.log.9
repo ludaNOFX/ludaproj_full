@@ -1,0 +1,108 @@
+2023-07-03 23:50:33,341 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-04 02:10:37,721 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-04 02:10:56,237 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-09 00:48:42,830 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-09 00:49:04,057 ERROR: Exception on /user/egor [GET] [in /home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py:1414]
+Traceback (most recent call last):
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/routes.py", line 29, in user
+    return render_template('user.html', user=user)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/templating.py", line 132, in _render
+    rv = template.render(context)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/templates/user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/templates/base.html", line 31, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/templates/user.html", line 21, in block 'content'
+    {{ form.hidden_tag() }}
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/jinja2/environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'form' is undefined
+2023-07-09 00:51:12,816 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-09 00:53:01,229 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-09 01:46:43,733 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-09 01:47:03,651 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-09 01:47:08,113 ERROR: Exception on /add_product [GET] [in /home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py:1414]
+Traceback (most recent call last):
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/routes.py", line 50, in add_product
+    return render_template("add_product.html", title='Add Product', form=form)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/templating.py", line 132, in _render
+    rv = template.render(context)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/templates/add_product.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/templates/base.html", line 31, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/templates/add_product.html", line 8, in block 'content'
+    {{ form.product_name.label }}<br>
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/jinja2/environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'app.forms.ProductForm object' has no attribute 'product_name'
+2023-07-09 01:49:42,956 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-09 01:49:47,256 ERROR: Exception on /add_product [GET] [in /home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py:1414]
+Traceback (most recent call last):
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/routes.py", line 50, in add_product
+    return render_template("add_product.html", title='Add Product', form=form)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/templating.py", line 132, in _render
+    rv = template.render(context)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/templates/add_product.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/templates/base.html", line 31, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/templates/add_product.html", line 10, in block 'content'
+    {% for error in form.product_name.errors %}
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/jinja2/environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'app.forms.ProductForm object' has no attribute 'product_name'
+2023-07-09 01:50:11,069 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-09 02:01:27,233 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-09 02:03:49,287 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-13 21:36:53,457 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-13 22:17:22,051 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-13 22:21:12,056 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]

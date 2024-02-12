@@ -1,0 +1,87 @@
+2024-02-09 04:17:12,308 ERROR: Exception on /auth/register [POST] [in /home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py:1414]
+Traceback (most recent call last):
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/auth/routes.py", line 49, in register
+    db.session.commit()
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/sqlalchemy/orm/scoping.py", line 552, in commit
+    return self._proxied.commit()
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1920, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1246, in commit
+    self.session.dispatch.after_commit(self.session)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/sqlalchemy/event/attr.py", line 378, in __call__
+    fn(*args, **kw)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/models.py", line 36, in after_commit
+    add_to_index(obj.__tablename__, obj)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/search.py", line 10, in add_to_index
+    current_app.elasticsearch.index(index=index, id=model.id, body=payload)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/elasticsearch/_sync/client/utils.py", line 414, in wrapped
+    return api(*args, **kwargs)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/elasticsearch/_sync/client/__init__.py", line 2318, in index
+    return self.perform_request(  # type: ignore[return-value]
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/elasticsearch/_sync/client/_base.py", line 285, in perform_request
+    meta, resp_body = self.transport.perform_request(
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ConnectionError(Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7fb8f4567a60>: Failed to establish a new connection: [Errno 111] Connection refused))
+2024-02-09 04:19:59,420 INFO: Luda startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:71]
+2024-02-09 04:20:16,867 ERROR: Exception on /auth/register [POST] [in /home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py:1414]
+Traceback (most recent call last):
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/auth/routes.py", line 49, in register
+    db.session.commit()
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/sqlalchemy/orm/scoping.py", line 552, in commit
+    return self._proxied.commit()
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1920, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1246, in commit
+    self.session.dispatch.after_commit(self.session)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/sqlalchemy/event/attr.py", line 378, in __call__
+    fn(*args, **kw)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/models.py", line 36, in after_commit
+    add_to_index(obj.__tablename__, obj)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/search.py", line 10, in add_to_index
+    current_app.elasticsearch.index(index=index, id=model.id, body=payload)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/elasticsearch/_sync/client/utils.py", line 414, in wrapped
+    return api(*args, **kwargs)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/elasticsearch/_sync/client/__init__.py", line 2318, in index
+    return self.perform_request(  # type: ignore[return-value]
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/elasticsearch/_sync/client/_base.py", line 285, in perform_request
+    meta, resp_body = self.transport.perform_request(
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ConnectionError(Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7f630ac7b670>: Failed to establish a new connection: [Errno 111] Connection refused))
+2024-02-09 04:24:16,928 INFO: Luda startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:71]
+2024-02-09 04:24:33,847 ERROR: Elasticsearch indexing error: Connection error caused by: ConnectionError(Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7fd0deb831f0>: Failed to establish a new connection: [Errno 111] Connection refused)) [in /home/egoza/PycharmProjects/LUDAPROJECT/app/search.py:14]
+2024-02-09 04:24:38,581 ERROR: Elasticsearch indexing error: Connection error caused by: ConnectionError(Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7fd0deb31f90>: Failed to establish a new connection: [Errno 111] Connection refused)) [in /home/egoza/PycharmProjects/LUDAPROJECT/app/search.py:14]
+2024-02-09 04:24:41,484 ERROR: Elasticsearch indexing error: Connection error caused by: ConnectionError(Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7fd0deb80f70>: Failed to establish a new connection: [Errno 111] Connection refused)) [in /home/egoza/PycharmProjects/LUDAPROJECT/app/search.py:14]
+2024-02-09 04:24:45,131 ERROR: Elasticsearch indexing error: Connection error caused by: ConnectionError(Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7fd0df9e7460>: Failed to establish a new connection: [Errno 111] Connection refused)) [in /home/egoza/PycharmProjects/LUDAPROJECT/app/search.py:14]
+2024-02-09 04:24:47,042 ERROR: Elasticsearch indexing error: Connection error caused by: ConnectionError(Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7fd0deb81450>: Failed to establish a new connection: [Errno 111] Connection refused)) [in /home/egoza/PycharmProjects/LUDAPROJECT/app/search.py:14]
+2024-02-09 04:24:48,306 ERROR: Elasticsearch indexing error: Connection error caused by: ConnectionError(Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7fd0de09cc70>: Failed to establish a new connection: [Errno 111] Connection refused)) [in /home/egoza/PycharmProjects/LUDAPROJECT/app/search.py:14]
+2024-02-09 04:24:51,244 ERROR: Elasticsearch indexing error: Connection error caused by: ConnectionError(Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7fd0deb32bc0>: Failed to establish a new connection: [Errno 111] Connection refused)) [in /home/egoza/PycharmProjects/LUDAPROJECT/app/search.py:14]
+2024-02-09 04:24:52,364 ERROR: Elasticsearch indexing error: Connection error caused by: ConnectionError(Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7fd0deb1edd0>: Failed to establish a new connection: [Errno 111] Connection refused)) [in /home/egoza/PycharmProjects/LUDAPROJECT/app/search.py:14]
+2024-02-09 04:24:52,395 ERROR: Elasticsearch indexing error: Connection error caused by: ConnectionError(Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7fd0deb1f0d0>: Failed to establish a new connection: [Errno 111] Connection refused)) [in /home/egoza/PycharmProjects/LUDAPROJECT/app/search.py:14]

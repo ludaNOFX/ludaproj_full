@@ -1,0 +1,109 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block title %}
+    {% if title %}{{ title }} - LudaProject{% else %}Welcome to LudaProject{% endif %}
+{% endblock %}
+
+{% block styles %}
+  {{ super() }}
+  <style>
+    body {
+      background-color: #0d1117; /* GitHub Background Dark */
+      color: #ccc; /* Light color for main content */
+    }
+
+    .navbar {
+      background-color: #24292e; /* GitHub Dark */
+      border: none;
+      box-shadow: none;
+    }
+
+    .navbar-brand,
+    .navbar-nav .nav-link {
+      color: #ffffff; /* White */
+    }
+
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link:focus {
+      color: #c9d1d9; /* GitHub Link Light Grey */
+    }
+
+    .navbar-nav .nav-item {
+      font-size: 18px;
+      font-weight: 300;
+    }
+
+    img, .img-thumbnail {
+      border: none;
+      box-shadow: none;
+      background-color: transparent;
+    }
+  </style>
+{% endblock %}
+
+{% block navbar %}
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="{{ url_for('main.index') }}">LudaProject</a>
+
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="nav navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('main.art_flow') }}">Art Flow</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('main.index') }}">Home</a>
+          </li>
+        </ul>
+        {% if g.search_form %}
+        <form class="navbar-form navbar-left" method="get" action="{{ url_for('main.search') }}">
+            <div class="form-group">
+                {{ g.search_form.q(size=20, class='form-control', placeholder=g.search_form.q.label.text) }}
+            </div>
+        </form>
+        {% endif %}
+        <ul class="nav navbar-nav navbar-right">
+          {% if current_user.is_anonymous %}
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('auth.login') }}">Login</a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('main.user', username=current_user.username) }}">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('auth.logout') }}">Logout</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('main.cart') }}">Liked</a>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </nav>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+            <div class="alert alert-info" role="alert">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+
+        {# application content needs to be provided in the app_content block #}
+        {% block app_content %}{% endblock %}
+    </div>
+{% endblock %}

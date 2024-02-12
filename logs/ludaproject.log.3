@@ -1,0 +1,102 @@
+2023-07-14 20:41:51,762 ERROR: Exception on / [GET] [in /home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py:1414]
+Traceback (most recent call last):
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/routes.py", line 30, in index
+    return render_template('index.html', title='index', products=products.items,
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/templating.py", line 132, in _render
+    rv = template.render(context)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/templates/base.html", line 32, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/templates/index.html", line 5, in block 'content'
+    {% include '_product.html' %}
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/templates/_product.html", line 10, in top-level template code
+    {% set user_picture = product.author.pictures.first() %}
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/jinja2/environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'None' has no attribute 'pictures'
+2023-07-14 20:42:27,060 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 20:42:28,365 ERROR: Exception on / [GET] [in /home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py:1414]
+Traceback (most recent call last):
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/routes.py", line 30, in index
+    return render_template('index.html', title='index', products=products.items,
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/flask/templating.py", line 132, in _render
+    rv = template.render(context)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/templates/base.html", line 32, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/templates/index.html", line 5, in block 'content'
+    {% include '_product.html' %}
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/app/templates/_product.html", line 10, in top-level template code
+    {% set user_picture = product.author.pictures.first() %}
+  File "/home/egoza/PycharmProjects/LUDAPROJECT/venv/lib/python3.10/site-packages/jinja2/environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'None' has no attribute 'pictures'
+2023-07-14 20:44:20,317 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 20:45:09,469 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 20:45:43,523 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 20:49:20,503 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 20:52:33,275 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 20:54:14,745 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 21:00:08,419 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 21:01:09,062 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 21:05:24,732 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 21:06:43,066 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 21:07:50,648 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 21:07:55,802 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 21:07:59,958 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 21:08:04,043 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 21:09:29,532 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 21:11:51,081 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 21:20:40,832 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 21:22:40,249 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 21:45:36,228 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 21:57:36,018 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 22:02:25,387 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 22:06:35,126 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 22:08:05,308 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 22:11:45,744 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 22:12:39,673 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 22:16:33,784 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 22:16:38,535 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 22:19:07,412 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 22:22:31,961 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 22:22:38,842 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 22:22:44,335 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 22:22:57,631 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 22:30:21,633 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 22:34:18,218 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]
+2023-07-14 22:35:15,591 INFO: Ludaproject startup [in /home/egoza/PycharmProjects/LUDAPROJECT/app/__init__.py:44]

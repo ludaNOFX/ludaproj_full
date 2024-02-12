@@ -1,0 +1,16 @@
+.custom-file-upload {
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    background-color: #6b6b6b; /* более темный серый */
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    border: none; /* убираем рамку */
+    border-radius: 0.25rem;
+    transition: background-color 0.5s ease;
+}
+
+.custom-file-upload:hover {
+    background-color: #4d4d4d; /* более темный серый при наведении */
+}

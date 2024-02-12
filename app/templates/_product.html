@@ -1,0 +1,86 @@
+{% block extra_css %}
+    <style>
+        .product-image {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 25px;
+        }
+
+        .product-image2 {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 25px;
+        }
+
+        .table {
+            background-color: #24292e;
+            border-collapse: separate;
+
+
+            /* добавляем границу вокруг элемента; указываем ширину границы, стиль (solid - сплошная линия) и цвет */
+            border: 2px solid #1a1a1a;
+        }
+
+        .table-hover tbody tr:hover{
+            background-color: #343a40 !important;
+            border-radius: 25px;
+        }
+
+        .table td, .table th {
+            border: none;
+            width: 100%;
+        }
+
+        body {
+            background-color: #0d1117;
+            color: #ccc;
+        }
+
+    </style>
+{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+
+<div class="container my-4">
+    <div class="row">
+        <div class="col-md-4">
+            <table class="table table-hover">
+                <td class="" width="70px">
+                    <a class="table-hover rounded my-0" href="{{ url_for('main.user', username=product.author.username) }}">
+                    {% set user_picture = product.author.pictures.first() if product.author.pictures else None %}
+                    {% set user_img = user_picture.formats.filter_by(format='50x50').first() if user_picture else None %}
+                    {% set user_img_file = user_img.filename if user_img else 'profile_default2.png' %}
+                    <img class="product-image2" src="{{ url_for('static', filename='profile_pics/' + user_img_file) }}" alt="Avatar of {{ product.author.username }}" />
+                    </a>
+                </td>
+                <td class="table-hover">
+                            <!-- Author's Name -->
+                <a href="{{ url_for('main.user', username=product.author.username) }}">
+                {{ product.author.username }}
+                </a>:
+                <br>
+                <strong>
+                <a href="{{ url_for('main.product', name=product.name) }}">
+                {{ product.name }}
+                </a>
+                </strong>
+                <br>
+                <a href="{{ url_for('main.product', name=product.name) }}">
+                {% set product_picture = product.pictures.first() %}
+                {% set picture_format = product_picture.formats.filter_by(format='300x300').first() if product_picture else None %}
+                {% set picture_file = picture_format.filename if picture_format else 'default2.png' %}
+                <img class="product-image" src="{{ url_for('static', filename='product_pics/' + picture_file) }}" alt="Picture of {{ product.name }}">
+                </a>
+                </td>
+            </table>
+        </div>
+    </div>
+</div>
+
+</html>
